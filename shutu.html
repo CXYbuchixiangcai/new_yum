@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+
+<body>
+	<!-- 2. 定义容器，设置ID属性，设置容器的宽度和高度 -->
+	<div id="chart1" style="width: 1000px; height: 800px;"></div>
+	<!-- 1. 引入 echarts.js -->
+	<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.1/echarts.min.js"></script>
+	<script type="text/javascript">
+		// 3. 初始化图表
+		let echart1Obj = document.getElementById('chart1')
+		let chart1 = echarts.init(echart1Obj)
+		// 4. 配置图表
+		let option1 = {
+			series: [{
+				type: 'tree',
+				data: [{
+					name: "董事长",
+					label: {
+						color: "#ffffff",
+						fontSize: 25,
+						padding: [10, 10, 10, 10],
+						backgroundColor: "#0062B1",
+						borderWidth: 0,
+						borderRadius: [50, 50, 50, 50],
+						width: 100,
+						overflow: "break",
+						height: 40,
+					},
+					lineStyle: {
+						color: '#009CE0',
+						width: 5
+					},
+					children: [{
+						name: "总经理",
+						label: {
+							color: "#ffffff",
+							fontSize: 20,
+							padding: [10, 10, 10, 10],
+							backgroundColor: "#009CE0",
+							borderWidth: 0,
+							borderRadius: [50, 50, 50, 50],
+							width: 80,
+							overflow: "break",
+							height: 30,
+						},
+						lineStyle: {
+							color: '#68BC00',
+							width: 5
+						},
+						children: [{
+							name: "行政总监",
+							lineStyle: {
+								color: '#FB9E00',
+								width: 5,
+								height:20
+							},
+							label: {
+								color: "#ffffff",
+								fontSize: 15,
+								padding: [10, 10, 10, 10],
+								backgroundColor: "#FB9E00",
+								borderWidth: 0,
+								borderRadius: [5, 5, 5, 5],
+								width: 60,
+								overflow: "break",
+								height: 15,
+							},
+							children: [{
+								name: "综合管理部",
+								label: {
+									color: "#21200b",
+									fontSize: 15,
+									fontFamily: "宋体",
+									fontWeight: "bold",
+									lineHeight: 34,
+									padding: [10, 10, 10, 10],
+									backgroundColor: "#ffffff",
+									borderWidth: 3,
+									borderColor: "#FB9E00",
+									borderRadius: [5, 5, 5, 5],
+									width: 15,
+									overflow: "break",
+									height: 150,
+									offset: [0, 50]
+								}
+							},
+							{
+								name: "企  划  部",
+								label: {
+									color: "#21200b",
+									fontSize: 15,
+									fontFamily: "宋体",
+									fontWeight: "bold",
+									lineHeight: 23,
+									padding: [10, 10, 10, 10],
+									backgroundColor: "#ffffff",
+									borderWidth: 3,
+									borderColor: "#FB9E00",
+									borderRadius: [5, 5, 5, 5],
+									width: 15,
+									overflow: "break",
+									height: 150,
+									offset: [0, 50]
+								}
+							},
+							{
+								name: "品  质  部",
+								label: {
+									color: "#21200b",
+									fontSize: 15,
+									fontFamily: "宋体",
+									fontWeight: "bold",
+									lineHeight: 23,
+									padding: [10, 10, 10, 10],
+									backgroundColor: "#ffffff",
+									borderWidth: 3,
+									borderColor: "#FB9E00",
+									borderRadius: [5, 5, 5, 5],
+									width: 15,
+									overflow: "break",
+									height: 150,
+									offset: [0, 50]
+								}
+							},
+							]
+						},
+
+						{
+							name: "财务总监",
+							lineStyle: {
+								color: '#7B64FF',
+								width: 5
+							},
+							label: {
+								color: "#ffffff",
+								fontSize: 15,
+								padding: [10, 10, 10, 10],
+								backgroundColor: "#7B64FF",
+								borderWidth: 0,
+								borderRadius: [5, 5, 5, 5],
+								width: 60,
+								overflow: "break",
+								height: 15,
+							},
+							children: [{
+								name: "出   纳",
+								label: {
+									color: "#21200b",
+									fontSize: 15,
+									fontFamily: "宋体",
+									fontWeight: "bold",
+									lineHeight: 18,
+									padding: [10, 10, 10, 10],
+									backgroundColor: "#ffffff",
+									borderWidth: 3,
+									borderColor: "#7B64FF",
+									borderRadius: [5, 5, 5, 5],
+									width: 15,
+									overflow: "break",
+									height: 80,
+								}
+							},
+							{
+								name: "财   务",
+								label: {
+									color: "#21200b",
+									fontSize: 15,
+									fontFamily: "宋体",
+									fontWeight: "bold",
+									lineHeight: 18,
+									padding: [10, 10, 10, 10],
+									backgroundColor: "#ffffff",
+									borderWidth: 3,
+									borderColor: "#7B64FF",
+									borderRadius: [5, 5, 5, 5],
+									width: 15,
+									overflow: "break",
+									height: 80,
+								}
+							}
+							]
+						},
+
+
+						{
+							name: "运营总监",
+							lineStyle: {
+								color: '#B0BC00',
+								width: 5
+							},
+							label: {
+								color: "#ffffff",
+								fontSize: 15,
+								padding: [10, 10, 10, 10],
+								backgroundColor: "#B0BC00",
+								borderWidth: 0,
+								borderRadius: [5, 5, 5, 5],
+								width: 60,
+								overflow: "break",
+								height: 15,
+							},
+							children: [{
+								name: "物流管理部",
+								lineStyle: {
+									color: '#B0BC00',
+									width: 5,
+								},
+								label: {
+									color: "#ffffff",
+									fontSize: 15,
+									padding: [10, 10, 10, 10],
+									backgroundColor: "#B0BC00",
+									borderWidth: 0,
+									borderRadius: [5, 5, 5, 5],
+									width: 80,
+									overflow: "break",
+									height: 15,
+								},
+								children: [{
+									name: "保    洁",
+									label: {
+										color: "#21200b",
+										fontSize: 15,
+										fontFamily: "宋体",
+										fontWeight: "bold",
+										lineHeight: 18,
+										padding: [10, 10, 10, 10],
+										backgroundColor: "#ffffff",
+										borderWidth: 3,
+										borderColor: "#B0BC00",
+										borderRadius: [5, 5, 5, 5],
+										width: 15,
+										overflow: "break",
+										height: 100,
+										offset: [0, 30]
+									}
+								},
+								{
+									name: "公共秩序维护",
+									label: {
+										color: "#21200b",
+										fontSize: 15,
+										fontFamily: "宋体",
+										fontWeight: "bold",
+										lineHeight: 18,
+										padding: [10, 10, 10, 10],
+										backgroundColor: "#ffffff",
+										borderWidth: 3,
+										borderColor: "#B0BC00",
+										borderRadius: [5, 5, 5, 5],
+										width: 15,
+										overflow: "break",
+										height: 100,
+										offset: [0, 30]
+									}
+								},
+								{
+									name: "设    备",
+									label: {
+										color: "#21200b",
+										fontSize: 15,
+										fontFamily: "宋体",
+										fontWeight: "bold",
+										lineHeight: 18,
+										padding: [10, 10, 10, 10],
+										backgroundColor: "#ffffff",
+										borderWidth: 3,
+										borderColor: "#B0BC00",
+										borderRadius: [5, 5, 5, 5],
+										width: 15,
+										overflow: "break",
+										height: 100,
+										offset: [0, 30]
+									}
+								},
+								{
+									name: "园林  绿化",
+									label: {
+										color: "#21200b",
+										fontSize: 15,
+										fontFamily: "宋体",
+										fontWeight: "bold",
+										lineHeight: 18,
+										padding: [10, 10, 10, 10],
+										backgroundColor: "#ffffff",
+										borderWidth: 3,
+										borderColor: "#B0BC00",
+										borderRadius: [5, 5, 5, 5],
+										width: 15,
+										overflow: "break",
+										height: 100,
+										offset: [0, 30]
+									}
+								},
+								{
+									name: "食堂  管理",
+									label: {
+										color: "#21200b",
+										fontSize: 15,
+										fontFamily: "宋体",
+										fontWeight: "bold",
+										lineHeight: 18,
+										padding: [10, 10, 10, 10],
+										backgroundColor: "#ffffff",
+										borderWidth: 3,
+										borderColor: "#B0BC00",
+										borderRadius: [5, 5, 5, 5],
+										width: 15,
+										overflow: "break",
+										height: 100,
+										offset: [0, 30]
+									}
+								}
+								]
+							},]
+						},
+						{
+							name: "市场总监",
+							lineStyle: {
+								color: '#16A5A5',
+								width: 5
+							},
+							label: {
+								color: "#ffffff",
+								fontSize: 15,
+								padding: [10, 10, 10, 10],
+								backgroundColor: "#16A5A5",
+								borderWidth: 0,
+								borderRadius: [5, 5, 5, 5],
+								width: 60,
+								overflow: "break",
+								height: 15,
+							},
+							children: [{
+								name: "市场研发",
+								label: {
+									color: "#21200b",
+									fontSize: 15,
+									fontFamily: "宋体",
+									fontWeight: "bold",
+									lineHeight: 25,
+									padding: [10, 10, 10, 10],
+									backgroundColor: "#ffffff",
+									borderWidth: 3,
+									borderColor: "#16A5A5",
+									borderRadius: [5, 5, 5, 5],
+									width: 15,
+									overflow: "break",
+									height: 80,
+									offset: [0, 0]
+								}
+							},
+							{
+								name: "市场策划",
+								label: {
+									color: "#21200b",
+									fontSize: 15,
+									fontFamily: "宋体",
+									fontWeight: "bold",
+									lineHeight: 25,
+									padding: [10, 10, 10, 10],
+									backgroundColor: "#ffffff",
+									borderWidth: 3,
+									borderColor: "#16A5A5",
+									borderRadius: [5, 5, 5, 5],
+									width: 15,
+									overflow: "break",
+									height: 80,
+									offset: [0, 0]
+								}
+							},
+							]
+						},
+						{
+							name: "工程总监",
+							lineStyle: {
+								color: '#68BC00',
+								width: 5
+							},
+							label: {
+								color: "#ffffff",
+								fontSize: 15,
+								padding: [10, 10, 10, 10],
+								backgroundColor: "#68BC00",
+								borderWidth: 0,
+								borderRadius: [5, 5, 5, 5],
+								width: 60,
+								overflow: "break",
+								height: 10,
+							},
+							children: [{
+								name: "高空清洁▲维护",
+								label: {
+									color: "#21200b",
+									fontSize: 15,
+									fontFamily: "宋体",
+									fontWeight: "bold",
+									lineHeight: 20,
+									padding: [10, 10, 10, 10],
+									backgroundColor: "#ffffff",
+									borderWidth: 3,
+									borderColor: "#68BC00",
+									borderRadius: [5, 5, 5, 5],
+									width: 15,
+									overflow: "break",
+									height: 130,
+									offset: [0, 50]
+								}
+							},
+							{
+								name: "开荒▲打蜡▲结晶",
+								label: {
+									color: "#21200b",
+									fontSize: 15,
+									fontFamily: "宋体",
+									fontWeight: "bold",
+									lineHeight: 18,
+									padding: [10, 10, 10, 10],
+									backgroundColor: "#ffffff",
+									borderWidth: 3,
+									borderColor: "#68BC00",
+									borderRadius: [5, 5, 5, 5],
+									width: 15,
+									overflow: "break",
+									height: 130,
+									offset: [0, 50]
+								}
+							}
+							]
+						},
+						]
+					}]
+				}],
+				edgeShape: "polyline",
+				symbolSize: 0,
+				orient: "TB",
+				initialTreeDepth: -1,
+				symbolOffset: [0, 0],
+				label: {
+					show: true,
+					position: "inside",
+					distance: 20,
+					borderWidth: 1,
+					borderColor: 'red',
+					borderStyle: 'solid',
+					padding: [5, 10, 5, 10],
+					offset: [0, 10]
+
+				},
+				lineStyle: {
+					color: "blue",
+				},
+			}]
+		};
+		// 5. 渲染图表
+		chart1.setOption(option1)
+	</script>
+</body>
+
+</html>
